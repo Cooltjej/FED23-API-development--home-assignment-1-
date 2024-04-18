@@ -1,0 +1,41 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id  Int   @id @default(autoincrement()) @db.UnsignedInt
+  email String @unique
+  password String
+  first_name String
+  last_name String
+  photos Photo[]
+  albums Album[]
+}
+
+model Photo {
+  id Int @id @default(autoincrement()) @db.UnsignedInt
+  title String
+  url String
+  comment String?
+  userId Int @db.UnsignedInt
+  user User @relation(fields: [userId], references: [id])
+  album Album[]
+	@@map("Photos")
+}
+
+model Album {
+  id Int @id @default(autoincrement()) @db.UnsignedInt
+  title String @unique                 // OBS kom ihåg att skriva detta som kommentar på inlämningen, att jag valde att göra den unique!
+  userId Int @db.UnsignedInt
+  user User @relation(fields: [userId], references: [id])
+  photos Photo[]
+	@@map("Albums")
+}
+
+
+
