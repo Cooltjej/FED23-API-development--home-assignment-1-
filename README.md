@@ -10,11 +10,11 @@ Note: A user should only be able to view their own albums and photos, and only b
 
 USERS:
 
-Register a new account.
-View user information.
-VG: Log in to receive a JWT access token.
-VG: Obtain a JWT access token from a JWT refresh token.
-VG: Update user information (including changing password).
+*Register a new account.
+*View user information.
+*VG: Log in to receive a JWT access token.
+*VG: Obtain a JWT access token from a JWT refresh token.
+*VG: Update user information (including changing password).
 
 PHOTOS:
 
