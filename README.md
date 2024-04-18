@@ -12,66 +12,91 @@ USERS:
 
 Register a new account.  
 
-*View user information.  
+View user information.  
 
-*VG: Log in to receive a JWT access token.  
+VG: Log in to receive a JWT access token.  
 
-*VG: Obtain a JWT access token from a JWT refresh token.  
+VG: Obtain a JWT access token from a JWT refresh token.  
 
-*VG: Update user information (including changing password).  
-
-PHOTOS:
-
-List their photos.
-Create a new photo.
-Update a photo.
-VG: Delete a photo (also deletes any connections between the photo and albums it belongs to).
+VG: Update user information (including changing password).  
 
 
-ALBUMS:
+PHOTOS:  
 
-List their albums.
-Create new albums.
-Update an album.
-VG: Delete an album (also deletes any connections between the album and the photos it contains).
+List their photos.  
 
+Create a new photo.  
 
-ALBUM > PHOTOS:
+Update a photo.  
 
-List photos in an album.
-Add a photo to an album.
-VG: Add multiple photos to an album simultaneously.
-VG: Remove a photo from an album.
-Requirements Specification - Distinction
+VG: Delete a photo (also deletes any connections between the photo and albums it belongs to).  
 
-Use JWT (including Refresh Tokens) instead of HTTP Basic Auth.
-Use services for all database logic.
-Able to update user profile (including password).
-Able to delete a photo (also removes any links between the photo and albums).
-Able to delete an album (also removes any links between the album and photos).
-Able to add multiple photos simultaneously to an album.
-Able to remove a photo from an album.
+  
+ALBUMS:  
 
-------------------------------------------------------------
+List their albums.  
 
-Hygiene Requirements
+Create new albums.  
 
-The following hygiene requirements must be met regardless of the grade level.
+Update an album.  
 
-All source code must be written by yourself (although it's okay to use the Prisma boilerplate provided when accepting the assignment in GitHub Classroom).
+VG: Delete an album (also deletes any connections between the album and the photos it contains).  
 
-Utilize Express and Prisma. 
-Be written in TypeScript. 
-Follow REST, CRUD, and Resource Controller patterns. 
-All responses adhere to the JSend specification. 
-Authentication via HTTP Basic/JWT with password hashing/salting using bcrypt. 
-Validation of all incoming data. 
-Adhere to specified endpoint specifications (including HTTP method, path, request, and response). 
-Error handling (e.g., if the user attempts to access another user's albums or photos, or if the user tries to add a photo that does not belong to them to an album, or add a photo to a non-existent album). Utilize correct HTTP status codes. At least one migration. 
-Ensure all source code is correctly indented (of course!). Published on [TBD].
+  
+ALBUM > PHOTOS:  
 
-------------------------------------------------------------
+List photos in an album.  
 
-Version Control
+Add a photo to an album.  
+
+VG: Add multiple photos to an album simultaneously.  
+
+VG: Remove a photo from an album.  
+
+Requirements Specification - Distinction  
+
+Use JWT (including Refresh Tokens) instead of HTTP Basic Auth.  
+
+Use services for all database logic.  
+
+Able to update user profile (including password).  
+
+Able to delete a photo (also removes any links between the photo and albums).  
+
+Able to delete an album (also removes any links between the album and photos).  
+
+Able to add multiple photos simultaneously to an album.  
+
+Able to remove a photo from an album.  
+
+------------------------------------------------------------  
+
+Hygiene Requirements  
+
+The following hygiene requirements must be met regardless of the grade level.  
+
+All source code must be written by yourself (although it's okay to use the Prisma boilerplate provided when accepting the assignment in GitHub Classroom).  
+
+Utilize Express and Prisma.  
+
+Be written in TypeScript.  
+
+Follow REST, CRUD, and Resource Controller patterns.  
+
+All responses adhere to the JSend specification.  
+
+Authentication via HTTP Basic/JWT with password hashing/salting using bcrypt.  
+
+Validation of all incoming data.  
+
+Adhere to specified endpoint specifications (including HTTP method, path, request, and response).  
+
+Error handling (e.g., if the user attempts to access another user's albums or photos, or if the user tries to add a photo that does not belong to them to an album, or add a photo to a non-existent album). Utilize correct HTTP status codes. At least one migration.  
+
+Ensure all source code is correctly indented (of course!). Published on [TBD].  
+
+------------------------------------------------------------  
+
+Version Control  
 
 All development must be version controlled using GitHub Classroom. Regular commits with descriptive commit messages (in English).
